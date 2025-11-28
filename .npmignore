@@ -1,0 +1,14 @@
+node_modules/
+test-data/
+dashboard-ui/
+dashboard-server.js
+*.log
+.DS_Store
+test-local.js
+.git/
+.github/
+.vscode/
+.idea/
+*.test.js
+coverage/
+.env

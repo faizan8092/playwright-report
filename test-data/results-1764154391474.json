@@ -1,0 +1,635 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\playwright.config.js",
+    "rootDir": "C:/Users/Faizan/Desktop/ege_playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results-1764243179011.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Faizan/Desktop/ege_playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "Chrome",
+        "name": "Chrome",
+        "testDir": "C:/Users/Faizan/Desktop/ege_playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\QRCC\\landingPageAllLogin.spec.js",
+      "file": "tests/QRCC/landingPageAllLogin.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Save QR Code",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:33:01.710Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-ac0405e117bbcfc5759a",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Download large File",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12523,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Dashboard' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Dashboard' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Dashboard' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Dashboard' })\u001b[22m\n\n    at testSuccessfulLogin (C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js:116:65)\n    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:30:3",
+                    "location": {
+                      "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                      "column": 65,
+                      "line": 116
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers\\loginValidations.js:116\n\n\u001b[0m \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m doneButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 116 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 117 |\u001b[39m }\n \u001b[90m 118 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                        "column": 65,
+                        "line": 116
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'Dashboard' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'Dashboard' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mhelpers\\loginValidations.js:116\n\n\u001b[0m \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m doneButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 116 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 117 |\u001b[39m }\n \u001b[90m 118 |\u001b[39m\u001b[0m\n\u001b[2m    at testSuccessfulLogin (C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js:116:65)\u001b[22m\n\u001b[2m    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:30:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:33:11.490Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Download-large-File-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Download-large-File-Chrome\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Download-large-File-Chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                    "column": 65,
+                    "line": 116
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-7412578ec6eb8b0bb85b",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Bulk Upload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9450,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:33:55.768Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-e618f89208a27cdd392c",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "Make Dynamic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7889,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:05.447Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-0a312f9c5b3bd08d74d3",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "Track precise location",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:13.347Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-00b402b3bde4b4155538",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "More Qr designs options - Download large size button",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:22.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-1a44fc990e0305a1b0b9",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "More Qr designs options - Set as default design",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8408,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:30.663Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-2874474dec08840471ae",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "More Qr designs options - Apply default",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:39.083Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-485f6a22edc29c82068a",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "More Qr designs options -> Reset",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8048,
+                  "error": {
+                    "message": "Error: locator.fill: Error: strict mode violation: getByRole('textbox', { name: 'Password*' }) resolved to 2 elements:\n    1) <input name=\"pass\" required=\"\" type=\"password\" autocomplete=\"off\" class=\"form-control\" placeholder=\"Password\"/> aka getByRole('textbox', { name: 'Password*', exact: true })\n    2) <input type=\"password\" name=\"verify_pass\" class=\"form-control\" placeholder=\"Confirm password\"/> aka getByRole('textbox', { name: 'Confirm password*' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Password*' })\u001b[22m\n",
+                    "stack": "Error: locator.fill: Error: strict mode violation: getByRole('textbox', { name: 'Password*' }) resolved to 2 elements:\n    1) <input name=\"pass\" required=\"\" type=\"password\" autocomplete=\"off\" class=\"form-control\" placeholder=\"Password\"/> aka getByRole('textbox', { name: 'Password*', exact: true })\n    2) <input type=\"password\" name=\"verify_pass\" class=\"form-control\" placeholder=\"Confirm password\"/> aka getByRole('textbox', { name: 'Confirm password*' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Password*' })\u001b[22m\n\n    at testSuccessfulLogin (C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js:113:20)\n    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:137:3",
+                    "location": {
+                      "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                      "column": 20,
+                      "line": 113
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers\\loginValidations.js:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mUSER_NAME\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m password\u001b[33m.\u001b[39mfill(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mPASS\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m doneButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m\n \u001b[90m 116 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                        "column": 20,
+                        "line": 113
+                      },
+                      "message": "Error: locator.fill: Error: strict mode violation: getByRole('textbox', { name: 'Password*' }) resolved to 2 elements:\n    1) <input name=\"pass\" required=\"\" type=\"password\" autocomplete=\"off\" class=\"form-control\" placeholder=\"Password\"/> aka getByRole('textbox', { name: 'Password*', exact: true })\n    2) <input type=\"password\" name=\"verify_pass\" class=\"form-control\" placeholder=\"Confirm password\"/> aka getByRole('textbox', { name: 'Confirm password*' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('textbox', { name: 'Password*' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mhelpers\\loginValidations.js:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mUSER_NAME\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m password\u001b[33m.\u001b[39mfill(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mPASS\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m doneButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m\n \u001b[90m 116 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Dashboard'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at testSuccessfulLogin (C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js:113:20)\u001b[22m\n\u001b[2m    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:137:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:34:49.038Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllL-25d84--Qr-designs-options---Reset-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllL-25d84--Qr-designs-options---Reset-Chrome\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllL-25d84--Qr-designs-options---Reset-Chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\helpers\\loginValidations.js",
+                    "column": 20,
+                    "line": 113
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-89c35778ac50509a8839",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 126,
+          "column": 1
+        },
+        {
+          "title": "Upload logo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8153,
+                  "error": {
+                    "message": "ReferenceError: path is not defined",
+                    "stack": "ReferenceError: path is not defined\n    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:150:5",
+                    "location": {
+                      "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js",
+                      "column": 5,
+                      "line": 150
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 148 |\u001b[39m   \u001b[90m// uplaod logo\u001b[39m\n \u001b[90m 149 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//label[normalize-space()=\"Add Your Own Logo\"]'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 150 |\u001b[39m     path\u001b[33m.\u001b[39mjoin(process\u001b[33m.\u001b[39mcwd()\u001b[33m,\u001b[39m \u001b[32m'test-data'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'logo.png'\u001b[39m)\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 151 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 152 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n \u001b[90m 153 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//button[@type=\"button\" and contains(@class, \"btn_tab_gray\") and @data-type=\"login\" and text()=\"I\\'m an existing user\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js",
+                        "column": 5,
+                        "line": 150
+                      },
+                      "message": "ReferenceError: path is not defined\n\n\u001b[0m \u001b[90m 148 |\u001b[39m   \u001b[90m// uplaod logo\u001b[39m\n \u001b[90m 149 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//label[normalize-space()=\"Add Your Own Logo\"]'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles(\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 150 |\u001b[39m     path\u001b[33m.\u001b[39mjoin(process\u001b[33m.\u001b[39mcwd()\u001b[33m,\u001b[39m \u001b[32m'test-data'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'logo.png'\u001b[39m)\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 151 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 152 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\n \u001b[90m 153 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//button[@type=\"button\" and contains(@class, \"btn_tab_gray\") and @data-type=\"login\" and text()=\"I\\'m an existing user\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js:150:5\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:35:28.716Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Upload-logo-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Upload-logo-Chrome\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\test-results\\tests-QRCC-landingPageAllLogin-Upload-logo-Chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Faizan\\Desktop\\ege_playwright\\tests\\QRCC\\landingPageAllLogin.spec.js",
+                    "column": 5,
+                    "line": 150
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "494d7b3d7a68a7a7b7c8-862ad36b8dedf45f9fcf",
+          "file": "tests/QRCC/landingPageAllLogin.spec.js",
+          "line": 142,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "tests\\QRCC\\login.spec.js",
+      "file": "tests/QRCC/login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Complete login flow - errors and success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 10968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Error for empty password and email field",
+                      "duration": 2199
+                    },
+                    {
+                      "title": "Login is successful with valid credentials",
+                      "duration": 875
+                    }
+                  ],
+                  "startTime": "2025-11-27T11:33:01.670Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9800cc6000239fbe349a-66fd3762f55104479a4a",
+          "file": "tests/QRCC/login.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "tests\\QRCC\\signup.spec.js",
+      "file": "tests/QRCC/signup.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Signup test cases",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 19045,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-11-27T11:33:02.119Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "02bc7d5aae991488489e-4b23f1e0a6c93e5f62e5",
+          "file": "tests/QRCC/signup.spec.js",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-27T11:32:59.028Z",
+    "duration": 158292.77,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

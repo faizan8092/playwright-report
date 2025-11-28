@@ -1,0 +1,44 @@
+{
+  "name": "playwright-report",
+  "version": "1.0.0",
+  "description": "Beautiful test results dashboard for Playwright with charts and insights",
+  "main": "index.js",
+  "bin": {
+    "playwright-report": "./index.js"
+  },
+  "keywords": [
+    "playwright",
+    "test",
+    "dashboard",
+    "reporter",
+    "test-results",
+    "cli",
+    "playwright-report"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/playwright-report"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/playwright-report/issues"
+  },
+  "homepage": "https://github.com/yourusername/playwright-report#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "templates/",
+    "utils/",
+    "README.md",
+    "LICENSE"
+  ]
+}
