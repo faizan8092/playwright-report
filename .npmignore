@@ -1,14 +1,36 @@
+# Dependencies
 node_modules/
+dashboard-ui/node_modules/
+package-lock.json
+dashboard-ui/package-lock.json
+
+# Build artifacts
+dashboard-ui/build/
+dashboard-ui/.cache/
+
+# Test files
 test-data/
-dashboard-ui/
-dashboard-server.js
-*.log
-.DS_Store
 test-local.js
+tests/
+*.test.js
+coverage/
+
+# Development files
 .git/
 .github/
 .vscode/
 .idea/
-*.test.js
-coverage/
+.DS_Store
+*.log
+npm-debug.log*
 .env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Generated files (these get created by installer)
+dashboard-ui/
+dashboard-server.js
