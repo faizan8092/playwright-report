@@ -4,7 +4,7 @@
   "description": "Beautiful test results dashboard for Playwright with charts and insights",
   "main": "index.js",
   "bin": {
-    "playwright-report": "./index.js"
+    "playwright-report": "index.js"
   },
   "files": [
     "index.js",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/playwright-report"
+    "url": "git+https://github.com/faizan8092/playwright-report.git"
   },
   "engines": {
     "node": ">=14.0.0"
