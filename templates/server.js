@@ -11,10 +11,13 @@ app.use(express.json());
 
 // API to get list of all test result files
 app.get('/api/test-runs', (req, res) => {
-  const testResultsDir = path.join(__dirname, '../test-data');
+  const testResultsDir = path.join(__dirname, 'test-results');  // ← REMOVE ../
+  
+  //console.log('Looking for test results in:', testResultsDir); // ← Add debug log
   
   try {
     if (!fs.existsSync(testResultsDir)) {
+      console.log('❌ test-results directory does not exist!');
       return res.json([]);
     }
 
@@ -37,6 +40,7 @@ app.get('/api/test-runs', (req, res) => {
       })
       .sort((a, b) => b.timestamp - a.timestamp);
     
+    //console.log(`✅ Found ${files.length} test result files`);
     res.json(files);
   } catch (error) {
     console.error('Error reading test results:', error);
@@ -46,7 +50,10 @@ app.get('/api/test-runs', (req, res) => {
 
 // API to get specific test result details
 app.get('/api/test-runs/:filename', (req, res) => {
-  const filePath = path.join(__dirname, '../test-data', req.params.filename);
+  const testResultsDir = path.join(__dirname, 'test-results');  // ← FIXED
+  const filePath = path.join(testResultsDir, req.params.filename);  // ← FIXED
+  
+  //console.log('Reading file:', filePath); // ← Add debug log
   
   try {
     const data = fs.readFileSync(filePath, 'utf8');
@@ -59,4 +66,5 @@ app.get('/api/test-runs/:filename', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Test results server running on http://localhost:${PORT}`);
+  console.log(`📁 Looking for test results in: ${path.join(__dirname, 'test-results')}`);
 });
