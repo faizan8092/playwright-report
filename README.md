@@ -1,6 +1,3 @@
-# **Complete README.md**
-
-```markdown
 # 🎭 Playwright Report
 
 [![npm version](https://img.shields.io/npm/v/playwright-report.svg)](https://www.npmjs.com/package/playwright-report)
@@ -9,7 +6,7 @@
 
 Beautiful, modern test results dashboard for Playwright with interactive charts, detailed insights, and comprehensive test execution views.
 
-![Playwright Report Dashboard](https://via.placeholder.com/800x400/0f172a/60a5fa?text=Dashboard+Preview)
+<!-- ![Playwright Report Dashboard](https://via.placeholder.com/800x400/0f172a/60a5fa?text=Dashboard+Preview) -->
 
 ## ✨ Features
 
@@ -27,19 +24,19 @@ Beautiful, modern test results dashboard for Playwright with interactive charts,
 
 ### Option 1: Global Installation (Recommended)
 
-```
+```bash
 npm install -g playwright-report
 ```
 
 ### Option 2: Use with npx (No installation)
 
-```
+```bash
 npx playwright-report
 ```
 
 ### Option 3: Local Installation
 
-```
+```bash
 npm install --save-dev playwright-report
 ```
 
@@ -47,7 +44,7 @@ npm install --save-dev playwright-report
 
 ### 1. Setup Dashboard in Your Playwright Project
 
-```
+```bash
 cd my-playwright-project
 playwright-report
 ```
@@ -60,7 +57,7 @@ Interactive setup will ask:
 
 ### 2. Run Your Playwright Tests
 
-```
+```bash
 npm run test
 ```
 
@@ -68,7 +65,7 @@ This generates JSON test results in the `test-results/` folder.
 
 ### 3. View Dashboard
 
-```
+```bash
 npm run dashboard
 ```
 
@@ -78,7 +75,7 @@ Dashboard opens automatically at `http://localhost:3000` 🎉
 
 ### Commands
 
-```
+```bash
 # Setup dashboard (first time)
 playwright-report
 
@@ -97,7 +94,7 @@ npm run dashboard:ui
 
 ### Workflow
 
-```
+```bash
 # 1. Navigate to your Playwright project
 cd my-playwright-project
 
@@ -117,12 +114,12 @@ npm run dashboard
 
 The installer automatically updates your `playwright.config.js` to include JSON reporter:
 
-```
+```javascript
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  
+
   reporter: [
     ['html', { open: 'never' }],
     ['json', { 
@@ -149,7 +146,7 @@ export default defineConfig({
 
 If you prefer manual setup, add these scripts to your `package.json`:
 
-```
+```json
 {
   "scripts": {
     "test": "playwright test",
@@ -211,7 +208,7 @@ my-playwright-project/
 
 ### Port Already in Use
 
-```
+```bash
 # Windows
 netstat -ano | findstr :3000
 taskkill /PID <PID> /F
@@ -223,7 +220,7 @@ lsof -ti:3000 | xargs kill -9
 ### No Test Results
 
 Ensure JSON reporter is configured:
-```
+```javascript
 reporter: [
   ['json', { outputFile: `test-results/results-${Date.now()}.json` }]
 ]
@@ -232,7 +229,7 @@ reporter: [
 ### Dashboard Not Opening
 
 1. Check both servers are running:
-   ```
+   ```bash
    curl http://localhost:4141/api/test-runs
    curl http://localhost:3000
    ```
@@ -240,14 +237,14 @@ reporter: [
 2. Check `test-results/` folder exists and contains JSON files
 
 3. Reinstall dependencies:
-   ```
+   ```bash
    npm install
    cd dashboard-ui && npm install
    ```
 
 ### Module Not Found Errors
 
-```
+```bash
 # Clear cache and reinstall
 rm -rf node_modules package-lock.json
 npm install
@@ -261,7 +258,7 @@ npm install
 
 ### GitHub Actions
 
-```
+```yaml
 name: Playwright Tests
 
 on:
@@ -273,21 +270,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Install Playwright
         run: npx playwright install --with-deps
-      
+
       - name: Run tests
         run: npm run test
-      
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v3
@@ -299,7 +296,7 @@ jobs:
 
 ### GitLab CI
 
-```
+```yaml
 stages:
   - test
 
@@ -318,7 +315,7 @@ playwright-tests:
 
 ## 📊 Example Test
 
-```
+```javascript
 import { test, expect } from '@playwright/test';
 
 test.describe('Login Tests', () => {
@@ -327,7 +324,7 @@ test.describe('Login Tests', () => {
     await page.fill('#email', 'user@example.com');
     await page.fill('#password', 'password123');
     await page.click('button[type="submit"]');
-    
+
     await expect(page).toHaveURL(/dashboard/);
   });
 
@@ -336,14 +333,14 @@ test.describe('Login Tests', () => {
     await page.fill('#email', 'wrong@example.com');
     await page.fill('#password', 'wrongpass');
     await page.click('button[type="submit"]');
-    
+
     await expect(page.locator('.error')).toBeVisible();
   });
 });
 ```
 
 Run with:
-```
+```bash
 npx playwright test
 npm run dashboard
 ```
@@ -388,58 +385,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the Playwright community**
 
 ⭐ Star us on [GitHub](https://github.com/yourusername/playwright-report)
-```
-
-***
-
-## **Additional Files to Include:**
-
-### **LICENSE** (MIT License)
-
-```
-MIT License
-
-Copyright (c) 2025 Your Name
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-### **CHANGELOG.md**
-
-```markdown
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-## [1.0.0] - 2025-11-27
-
-### Added
-- Initial release
-- Modern dashboard UI with sidebar
-- Interactive charts (Pie chart, Bar chart)
-- Search and filter functionality
-- Expandable test details
-- Terminal-style error display
-- Attachment support (screenshots, videos, traces)
-- Cross-platform support (Windows, macOS, Linux)
-```
-
-***
-
-This README is comprehensive, professional, and includes everything users need! 🚀
