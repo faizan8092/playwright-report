@@ -1,6 +1,6 @@
 {
   "name": "playwright-report",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Beautiful test results dashboard for Playwright with charts and insights",
   "main": "index.js",
   "bin": {
